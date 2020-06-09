@@ -1,0 +1,19 @@
+Init client with profile=test-network.json
+create org with name=orderer.example.com
+create org with name=org1.example.com
+create org with name=org2.example.com
+create channel with name=mychannel
+create ca with name=ca-org1
+create ca with name=ca-org2
+Import orderers = dict_keys(['orderer.example.com'])
+Import peers = dict_keys(['peer0.org1.example.com', 'peer1.org1.example.com', 'peer0.org2.example.com', 'peer1.org2.example.com'])
+2.086761951446533
+create_account
+2.062662124633789
+deposit_checking
+2.056168794631958
+send_payment
+0.014606237411499023
+realQuery{"CustomId":"24","CustomName":"z","SavingsBalance":100,"CheckingBalance":0}
+2.05385684967041
+invoke-query
