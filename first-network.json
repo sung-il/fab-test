@@ -1,0 +1,166 @@
+{
+	"name": "first-network",
+	"version": "1.0.0",
+	"client": {
+		"tlsEnable": true,
+		"adminUser": "admin",
+		"adminPassword": "adminpw",
+		"enableAuthentication": false,
+		"organization": "Org1MSP",
+		"credentialStore": {
+		  "path": "/tmp/hfc-kvs",
+		  "cryptoStore": {
+			"path": "/tmp/hfc-cvs"
+		  },
+		  "wallet": "wallet-name"
+		},
+		"connection": {
+			"timeout": {
+				"peer": {
+					"endorser": "300"
+				},
+				"orderer": "300"
+			}
+		}
+	},
+	"channels": {
+		"mychannel": {
+			"peers": {
+				"peer0.org1.example.com": {},
+				"peer1.org1.example.com": {},
+				"peer0.org2.example.com": {},
+				"peer1.org2.example.com": {}
+			},
+			"connection": {
+				"timeout": {
+					"peer": {
+						"endorser": "6000",
+						"eventHub": "6000",
+						"eventReg": "6000"
+					}
+				}
+			}
+		}
+	},
+	"organizations": {
+		"Org1MSP": {
+			"mspid": "Org1MSP",
+			"adminPrivateKey": {
+				"path": "crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/keystore/34ccdff7e099d336b5688a775db630f10ee08d647bcd544085f5aae0328de538_sk"
+			},
+			"peers": ["peer0.org1.example.com"],
+			"certificateAuthorities": [
+			  "ca-org1"
+			],
+			"users": {
+			  "Admin": {
+				"cert": "crypto-config/ordererOrganizations/example.com/users/Admin@example.com/msp/signcerts/Admin@example.com-cert.pem",
+				"private_key": "crypto-config/ordererOrganizations/example.com/users/Admin@example.com/msp/keystore/e69f65d93a4a6d684d4bb810b9808522b0be6adef059e9b9fa56958229461c54_sk"
+			  }
+			},
+			"signedCert": {
+				"path": "crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/signcerts/Admin@org1.example.com-cert.pem"
+			}
+		},
+		"Org2MSP": {
+			"mspid": "Org2MSP",
+			"adminPrivateKey": {
+				"path": "crypto-config/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/keystore/48abdc143753b1ee58d17761dd16eeb7522bc69e3409a16b347866dd05413687_sk"
+			},
+			"peers": ["peer0.org1.example.com"],
+			"certificateAuthorities": [
+			  "ca-org2"
+			],
+			"signedCert": {
+				"path": "crypto-config/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/signcerts/Admin@org2.example.com-cert.pem"
+			}
+		}
+	},
+	"orderers": {
+	  "orderer.example.com": {
+		"url": "localhost:7050",
+		"grpcOptions": {
+		  "grpc.ssl_target_name_override": "orderer.example.com",
+		  "grpc-max-send-message-length": 15
+		},
+		"tlsCACerts": {
+		  "path": "crypto-config/ordererOrganizations/example.com/tlsca/tlsca.example.com-cert.pem"
+		}
+	  }
+	},
+	"peers": {
+		"peer0.org1.example.com": {
+			"tlsCACerts": {
+				"path": "crypto-config/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt"
+			},
+			"url": "localhost:7051",
+			"eventUrl": "localhost:7053",
+			"grpcOptions": {
+				"ssl-target-name-override": "peer0.org1.example.com",
+				"grpc.http2.keepalive_time": 15
+			}
+		},
+		"peer1.org1.example.com": {
+			"tlsCACerts": {
+				"path": "crypto-config/peerOrganizations/org1.example.com/peers/peer1.org1.example.com/tls/ca.crt"
+			},
+			"url": "localhost:8051",
+			"eventUrl": "localhost:8053",
+			"grpcOptions": {
+				"ssl-target-name-override": "peer1.org1.example.com"
+			}
+		},
+		"peer0.org2.example.com": {
+			"tlsCACerts": {
+				"path": "crypto-config/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt"
+			},
+			"url": "localhost:9051",
+			"eventUrl": "localhost:9053",
+			"grpcOptions": {
+				"ssl-target-name-override": "peer0.org2.example.com"
+			}
+		},
+		"peer1.org2.example.com": {
+			"tlsCACerts": {
+				"path": "crypto-config/peerOrganizations/org2.example.com/peers/peer1.org2.example.com/tls/ca.crt"
+			},
+			"url": "localhost:10051",
+			"eventUrl": "localhost:10053",
+			"grpcOptions": {
+				"ssl-target-name-override": "peer1.org2.example.com"
+			}
+		}
+	},
+	"certificateAuthorities": {
+		"ca-org1": {
+		  "url": "https://localhost:7050",
+		  "grpcOptions": {
+			"verify": true
+		  },
+		  "tlsCACerts": {
+			"path": "crypto-config/peerOrganizations/org1.example.com/ca/org1.example.com-cert.pem"
+		  },
+		  "registrar": [
+			{
+			  "enrollId": "admin",
+			  "enrollSecret": "adminpw"
+			}
+		  ]
+		},
+		"ca-org2": {
+		  "url": "https://localhost:8050",
+		  "grpcOptions": {
+			"verify": true
+		  },
+		  "tlsCACerts": {
+			"path": "crypto-config/peerOrganizations/org2.example.com/ca/org2.example.com-cert.pem"
+		  },
+		  "registrar": [
+			{
+			  "enrollId": "admin",
+			  "enrollSecret": "adminpw"
+			}
+		  ]
+		}
+	}
+}
