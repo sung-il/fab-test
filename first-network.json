@@ -93,8 +93,13 @@
 			"tlsCACerts": {
 				"path": "crypto-config/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt"
 			},
+<<<<<<< HEAD
 			"url": "peer0.org1.example.com:7051",
 			"eventUrl": "peer0.org1.example.com:7053",
+=======
+			"url": "localhost:7051",
+			"eventUrl": "localhost:7053",
+>>>>>>> abe828df8b16335f968db098f3b528813f682665
 			"grpcOptions": {
 				"ssl-target-name-override": "peer0.org1.example.com",
 				"grpc.http2.keepalive_time": 15
@@ -104,8 +109,13 @@
 			"tlsCACerts": {
 				"path": "crypto-config/peerOrganizations/org1.example.com/peers/peer1.org1.example.com/tls/ca.crt"
 			},
+<<<<<<< HEAD
 			"url": "peer1.org1.example.com:7051",
 			"eventUrl": "peer1.org1.example.com:7053",
+=======
+			"url": "localhost:8051",
+			"eventUrl": "localhost:8053",
+>>>>>>> abe828df8b16335f968db098f3b528813f682665
 			"grpcOptions": {
 				"ssl-target-name-override": "peer1.org1.example.com"
 			}
@@ -114,8 +124,13 @@
 			"tlsCACerts": {
 				"path": "crypto-config/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt"
 			},
+<<<<<<< HEAD
 			"url": "peer0.org2.example.com:7051",
 			"eventUrl": "peer0.org2.example.com:7053",
+=======
+			"url": "localhost:9051",
+			"eventUrl": "localhost:9053",
+>>>>>>> abe828df8b16335f968db098f3b528813f682665
 			"grpcOptions": {
 				"ssl-target-name-override": "peer0.org2.example.com"
 			}
@@ -124,8 +139,13 @@
 			"tlsCACerts": {
 				"path": "crypto-config/peerOrganizations/org2.example.com/peers/peer1.org2.example.com/tls/ca.crt"
 			},
+<<<<<<< HEAD
 			"url": "peer1.org2.example.com:7051",
 			"eventUrl": "peer1.org2.example.com:7053",
+=======
+			"url": "localhost:10051",
+			"eventUrl": "localhost:10053",
+>>>>>>> abe828df8b16335f968db098f3b528813f682665
 			"grpcOptions": {
 				"ssl-target-name-override": "peer1.org2.example.com"
 			}
