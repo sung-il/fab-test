@@ -50,7 +50,7 @@ amount='1000'
 dest_customer_id='55'
 source_customer_id=customer_id
 
-for customer_id in str(range(85, 95)):
+for customer_id in str(range(40, 50)):
     # Invoke Transaction
     # Create account
     args = [customer_id, customer_name, inital_checking_balance, inital_savings_balance]

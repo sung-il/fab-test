@@ -9,10 +9,10 @@ loop = asyncio.get_event_loop()
 cli = Client(net_profile="test-network.json")
 org1_admin = cli.get_user('org1.example.com', 'Admin')
 
-name="RT"
+name="TE"
 color="sky"
 size="35"
-owner="RT"
+owner="TE"
 
 # initMarbles
 # for i in range(10,51):
@@ -43,7 +43,7 @@ owner="RT"
 #             ))
 # print(response)
 
-# for i in range(100):
+# for i in range(10000):
 #     args = [name+str(i), color, size, owner+str(i)]
 #     response = loop.run_until_complete(cli.chaincode_invoke(
 #             requestor=org1_admin,
@@ -53,8 +53,8 @@ owner="RT"
 #             fcn='initMarble',
 #             cc_name='mymarbles',
 #             wait_for_event=True # for being sure chaincode invocation has been commited in the ledger, default is on tx event
-#             ))
-#     print("initMarble")
+            # ))
+    # print("initMarble")
     # print(response)
 
 # for i in range(1):
@@ -88,16 +88,29 @@ owner="RT"
 
 
 # Test
-for i in range(100):
-    args = ["RT1", "RT99"]
-    response = loop.run_until_complete(cli.chaincode_invoke(
-            requestor=org1_admin,
-            channel_name='mychannel',
-            peers=['peer0.org1.example.com'],
-            args=args,
-            fcn='getMarblesByRange',
-            cc_name='mymarbles',
-            wait_for_event=True # for being sure chaincode invocation has been commited in the ledger, default is on tx event
-            ))
+# for i in range(10):
+#     args = ["RT1", "RT99"]
+#     response = loop.run_until_complete(cli.chaincode_invoke(
+#             requestor=org1_admin,
+#             channel_name='mychannel',
+#             peers=['peer0.org1.example.com'],
+#             args=args,
+#             fcn='getMarblesByRange',
+#             cc_name='mymarbles',
+#             wait_for_event=True # for being sure chaincode invocation has been commited in the ledger, default is on tx event
+#             ))
     #print("getMarblesByRange")
     #print(response)
+
+# for i in range(20):
+#     args = ["RT0", "RT99"]
+#     response = loop.run_until_complete(cli.chaincode_invoke(
+#             requestor=org1_admin,
+#             channel_name='mychannel',
+#             peers=['peer0.org1.example.com'],
+#             args=args,
+#             fcn='getMarblesByRange',
+#             cc_name='mymarbles',
+#             wait_for_event=True # for being sure chaincode invocation has been commited in the ledger, default is on tx event
+#             ))
+    # print(response)
