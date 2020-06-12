@@ -1,22 +1,20 @@
-test:
-  name: smallbank
-  description: This is smallbank benchmark for caliper
-  clients:
-    type: local
-    number: 5
-  rounds:
-  - label: smallOperations
-    txNumber:
-    - 600
-    - 1500
-    rateControl:
-    - type: fixed-rate
-      opts:
-        tps: 200
-    - type: fixed-rate
-      opts:
-        tps: 500
-    arguments:
-      accounts: 400
-      txnPerBatch: 1
-    callback: benchmark/smallbank/smallbankOperations.js
+conf:
+  channel: mychannel
+  peer:
+    - id: peer0.org1.example.com
+      spec: 1
+    - id: peer1.org1.example.com
+      spec: 0.2
+    - id: peer0.org2.example.com
+      spec: 0.2
+    - id: peer1.org2.example.com
+      spec: 0.2
+  mysmallbank:
+    - fn: create_accout
+      ec: 210
+    - fn: deposit_checking
+      ec: 310
+    - fn: send_payment
+      ec: 620
+    - fn: query
+      ec: 110
