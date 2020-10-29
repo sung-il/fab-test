@@ -1,0 +1,30 @@
+conf:
+  channel: mychannel
+  peer:
+    - id: peer0.org1.example.com
+      spec: 1
+    - id: peer1.org1.example.com
+      spec: 0.2
+    - id: peer0.org2.example.com
+      spec: 0.2
+    - id: peer1.org2.example.com
+      spec: 0.2
+  chaincode:
+    - fn: create_accout
+      ec: 210
+    - fn: deposit_checking
+      ec: 310
+    - fn: send_payment
+      ec: 620
+    - fn: query
+      ec: 110
+    - fn: GetState
+      en: 10
+    - fn: PutState
+      en: 100
+    - fn: Marshal
+      en: 100
+    - fn: Unmarshal
+      en: 100
+    - fn: Return
+      en: 100
