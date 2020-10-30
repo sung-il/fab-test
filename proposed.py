@@ -47,8 +47,8 @@ response = loop.run_until_complete(cli.chaincode_invoke(
             peers=['peer1.org1.example.com'],
             args=args,
             fcn='query',
-            cc_name='mysmallbank',
-            wait_for_event=True # for being sure chaincode invocation has been commited in the ledger, default is on tx event
+            cc_name='mycc',
+            wait_for_event=False # for being sure chaincode invocation has been commited in the ledger, default is on tx event
             ))
 print("peer1.org1.example.com, queryy")
 

@@ -43,7 +43,7 @@
         "users": {
           "Admin": {
             "cert": "crypto-config/ordererOrganizations/example.com/users/Admin@example.com/msp/signcerts/Admin@example.com-cert.pem",
-            "private_key": "crypto-config/ordererOrganizations/example.com/users/Admin@example.com/msp/keystore/e69f65d93a4a6d684d4bb810b9808522b0be6adef059e9b9fa56958229461c54_sk"
+            "private_key": "crypto-config/ordererOrganizations/example.com/users/Admin@example.com/msp/keystore/7dccded2c051fe9ed53315e06c0e1ed20aec13d49832dae31ae1fc0f259273a6_sk"
           }
         }
       },
@@ -59,11 +59,11 @@
         "users": {
           "Admin": {
             "cert": "crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/signcerts/Admin@org1.example.com-cert.pem",
-            "private_key": "crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/keystore/34ccdff7e099d336b5688a775db630f10ee08d647bcd544085f5aae0328de538_sk"
+            "private_key": "crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/keystore/5e9d81ab6bb71b1da8b12917b3474e83c90b26ad1e3f6ca77de72622043909a6_sk"
           },
           "User1": {
             "cert": "crypto-config/peerOrganizations/org1.example.com/users/User1@org1.example.com/msp/signcerts/User1@org1.example.com-cert.pem",
-            "private_key": "crypto-config/peerOrganizations/org1.example.com/users/User1@org1.example.com/msp/keystore/f7d530f54a714c2c165db3bcd353128fd3f8576ef5512e4fb53f333b387f19db_sk"
+            "private_key": "crypto-config/peerOrganizations/org1.example.com/users/User1@org1.example.com/msp/keystore/abe0f6b3e7e0920ffe440023ecece7c2a475dd00cd1275f6dca8b183b156879b_sk"
           }
         }
       },
@@ -79,11 +79,11 @@
         "users": {
           "Admin": {
             "cert": "crypto-config/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/signcerts/Admin@org2.example.com-cert.pem",
-            "private_key": "crypto-config/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/keystore/48abdc143753b1ee58d17761dd16eeb7522bc69e3409a16b347866dd05413687_sk"
+            "private_key": "crypto-config/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/keystore/3c26b677a3f492b25ecb2e571957149b402e7ac052a7ce7a4616b932027ce896_sk"
           },
           "User1": {
             "cert": "crypto-config/peerOrganizations/org2.example.com/users/User1@org2.example.com/msp/signcerts/User1@org2.example.com-cert.pem",
-            "private_key": "crypto-config/peerOrganizations/org2.example.com/users/User1@org2.example.com/msp/keystore/069cf3f776919e616e0c3d012443fdb75c191316e7bd5f902f3dc7e00dd9aafc_sk"
+            "private_key": "crypto-config/peerOrganizations/org2.example.com/users/User1@org2.example.com/msp/keystore/5209ced1781d6f0f05df6df3a086312858a142d90bf6532b2fbff824265bbded_sk"
           }
         }
       }
