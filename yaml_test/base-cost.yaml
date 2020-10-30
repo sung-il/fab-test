@@ -1,0 +1,25 @@
+chaincode:
+  - fn: create_accout
+    GetState: 1
+    PutState: 1
+    Marshal: 1
+    Unmarshal: 0
+    Return: 0
+  - fn: deposit_checking
+    GetState: 1
+    PutState: 1
+    Marshal: 1
+    Unmarshal: 1
+    Return: 0
+  - fn: send_payment
+    GetState: 2
+    PutState: 2
+    Marshal: 2
+    Unmarshal: 2
+    Return: 0
+  - fn: query
+    GetState: 1
+    PutState: 0
+    Marshal: 0
+    Unmarshal: 0
+    Return: 1

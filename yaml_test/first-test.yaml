@@ -18,13 +18,3 @@ conf:
       ec: 620
     - fn: query
       ec: 110
-    - fn: GetState
-      en: 10
-    - fn: PutState
-      en: 100
-    - fn: Marshal
-      en: 100
-    - fn: Unmarshal
-      en: 100
-    - fn: Return
-      en: 100
